@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 /**
  * Filter input action buttons
+ 
  * Add the action button here instead of creating a
  * new folder and files
  */

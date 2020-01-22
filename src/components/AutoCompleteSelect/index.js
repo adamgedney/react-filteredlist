@@ -54,7 +54,6 @@ class AutoCompleteSelect extends Component {
 		// const self = this;
 		if (query !== '') {
 			return options.getOptions(query)
-				.toPromise()
 				.then((items) => {
 					if (items.length === 0) {
 						return [NO_RESULTS_FOUND];
