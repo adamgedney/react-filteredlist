@@ -22,7 +22,7 @@
     "prop-types": "^15.6.2",
     "react-addons-shallow-compare": "^15.5.2",
     "react-checkbox-group": "^3.1.1",
-    "react-chips": "^0.7.0",
+    "react-chips": "^0.8.0",
     "react-datepicker": "^1.8.0",
     "react-images": "^0.5.4",
     "react-intl": "^2.7.0",
