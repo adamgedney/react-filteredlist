@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Chips from 'react-chips';
+import Chips from 'react-chips2';
 import theme, {chipTheme} from './theme.js';
 
 const NO_RESULTS_FOUND = 'No results found.';
@@ -12,7 +12,7 @@ class AutoCompleteSelect extends Component {
 			items: []
 		};
 		
-		// this.onSearch = this.onSearch.bind(this);
+		this.onSearch = this.onSearch.bind(this);
 		this.onSelectChange = this.onSelectChange.bind(this);
 	}
 	
@@ -40,7 +40,6 @@ class AutoCompleteSelect extends Component {
 		this.setState({items: data});
 		
 		const {options, onSelectChange} = this.props;
-		
 		const formattedData = (data && Array.isArray(data) ?
 			data.map(d => {
 				return {[options.key]: d};
@@ -68,7 +67,8 @@ class AutoCompleteSelect extends Component {
 	render() {
 		const {items} = this.state;
 		const {placeholder} = this.props;
-		
+    const search = this.onSearch;
+    
 		return (<Chips
 			value={items}
 			theme={theme}
@@ -78,7 +78,7 @@ class AutoCompleteSelect extends Component {
 			fetchSuggestionsThrushold={5}
 			fromSuggestionsOnly={true}
 			highlightFirstSuggestion={true}
-			fetchSuggestions={(value) => this.onSearch(value)}
+			fetchSuggestions={(value) => search(value)}
 		/>);
 	}
 	

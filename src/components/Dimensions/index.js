@@ -8,10 +8,10 @@ import {connect} from 'react-redux';
  * new folder and files
  */
 const ActionButtons = ({ clearInputValue }) =>
-	<span className="dl__filterItemDimension__buttons">
+	(<span className="dl__filterItemDimension__buttons">
 		<span className="dl__filterItemDimension__buttons-clear" onClick={clearInputValue}><i className="fa fa-times-circle fa-lg"></i></span>
 		<button type="submit" value="Search" className="dl__filterItemDimension__buttons-search"><i className="fa fa-check fa-lg"></i></button>
-	</span>;
+  </span>);
 
 class AssetDimensions extends Component {
 	constructor(props) {
